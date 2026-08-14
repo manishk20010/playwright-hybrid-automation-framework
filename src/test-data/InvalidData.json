@@ -1,0 +1,22 @@
+[
+  {
+    "testCase": "Invalid Email",
+    "username": "invalid@gmail.com",
+    "password": "123456",
+    "expectedError": "Your email or password is incorrect!"
+  },
+  {
+    "testCase": "Invalid Password",
+    "username": "manish851203@gmail.com",
+    "password": "wrongpassword",
+    "expectedError": "Your email or password is incorrect!"
+  },
+   {
+    "testCase": "Empty User and Password",
+    "username": "",
+    "password": "",
+    "validation":"browser",
+    "expectedError": "Please fill out this field."
+  }
+  
+]
