@@ -14,9 +14,4 @@ test('Should not allow registration with existing email',async({signup})=>{
  await expect(await signup.existingUserMessage()).toHaveText('Email Address already exist!')
 
 
-
-
-
-
-
 })
