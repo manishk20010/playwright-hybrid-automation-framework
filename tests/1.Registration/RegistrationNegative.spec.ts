@@ -6,6 +6,7 @@ import { TakeScreenshot } from '../../src/utils/screenshotUtil'
 test('Should not allow registration with existing email',async({signup})=>{
 
   await signup.ClickSignUp()
+  
   const Email = existingemail()
  await signup.EnterSignupDetails('Smith',Email)
 
