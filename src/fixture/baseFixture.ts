@@ -15,7 +15,7 @@ export const test = base.extend<myFixture>({
 
        login: async({page},use)=>{
 
-        await page.goto('/login')
+        await page.goto('/login') 
 
         const loginPage = new LoginPage(page)
 
