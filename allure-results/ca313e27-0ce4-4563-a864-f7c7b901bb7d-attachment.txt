@@ -1,7 +1,0 @@
-{
-  id: 3,
-  name: 'Sleeveless Dress',
-  price: 'Rs. 1000',
-  brand: 'Madame',
-  category: { usertype: { usertype: 'Women' }, category: 'Dress' }
-}
