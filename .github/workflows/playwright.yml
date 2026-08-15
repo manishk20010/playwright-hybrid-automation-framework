@@ -79,6 +79,7 @@ jobs:
 
 
   deploy:
+    if: always()
     needs: test
 
     runs-on: ubuntu-latest
