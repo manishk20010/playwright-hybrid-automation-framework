@@ -27,7 +27,8 @@ export default defineConfig({
   [
     'allure-playwright',
     {
-      resultsDir: 'allure-results'
+      resultsDir: 'allure-results',
+      detail:true
     }
   ]
 ],
