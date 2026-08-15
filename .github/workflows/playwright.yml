@@ -51,6 +51,15 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test
 
+      - name: Check Allure Results
+        if: always()
+        run: |
+         echo "===== ALLURE RESULT FILES ====="
+         find allure-results -type f -name "*-result.json" | sort
+         echo "===== TOTAL ====="
+         find allure-results -type f -name "*-result.json" | wc -l
+
+
       - name: Generate Allure Report
         if: always()
         run: npx allure generate allure-results --output allure-report
