@@ -63,7 +63,7 @@ jobs:
 
       - name: Generate Allure Report
         if: always()
-        run: npx allure generate allure-results --clean --output allure-report
+        run: npx allure generate allure-results --output allure-report
 
       - name: Upload Allure Report
         if: always()
