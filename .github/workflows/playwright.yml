@@ -19,9 +19,8 @@ jobs:
 
     env:
       CI: true
-      URL: https://automationexercise.com
-      API_URL: https://automationexercise.com/api
-
+      ENV: UAT      
+      
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
