@@ -23,9 +23,14 @@ export default defineConfig({
 
   // Reports
   reporter: [
-    ['html'],
-    ['allure-playwright']
-  ],
+  ['html'],
+  [
+    'allure-playwright',
+    {
+      resultsDir: 'allure-results'
+    }
+  ]
+],
 
   use: {
     // URL from .env.UAT / .env.QA etc.
