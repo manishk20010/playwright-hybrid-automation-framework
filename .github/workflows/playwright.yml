@@ -1,6 +1,5 @@
 name: Playwright Tests
-env:
-    ENV: UAT
+
 on:
   push:
     branches: [main]
@@ -10,18 +9,18 @@ on:
 
   workflow_dispatch:
 
+env:
+  ENV: UAT
+
 jobs:
   test:
     timeout-minutes: 30
     runs-on: ubuntu-latest
 
-        
-
-    env:       
-       URL: https://automationexercise.com
-       API_URL: https://automationexercise.com/api
-
-
+    env:
+      CI: true
+      URL: https://automationexercise.com
+      API_URL: https://automationexercise.com/api
 
     steps:
       - name: Checkout code
