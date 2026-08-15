@@ -54,22 +54,21 @@ jobs:
       - name: Check Allure Results
         if: always()
         run: |
-         echo "===== ALLURE RESULT FILES ====="
-         find allure-results -type f -name "*-result.json" | sort
-         echo "===== TOTAL ====="
-         find allure-results -type f -name "*-result.json" | wc -l
+          echo "===== ALLURE RESULT FILES ====="
+          find allure-results -type f -name "*-result.json" | sort
+          echo "===== TOTAL ====="
+          find allure-results -type f -name "*-result.json" | wc -l
 
-         - name: Inspect Allure Test Results
-          if: always()
-          run: |
-            echo "===== TEST NAMES / STATUS / HISTORY ====="
+      - name: Inspect Allure Test Results
+        if: always()
+        run: |
+          echo "===== TEST NAMES / STATUS / HISTORY ====="
 
-            for file in allure-results/*-result.json; do
+          for file in allure-results/*-result.json; do
             echo "----------------------------------------"
             echo "FILE: $file"
             jq -r '"name=\(.name) | status=\(.status) | historyId=\(.historyId) | fullName=\(.fullName)"' "$file"
           done
-
 
       - name: Generate Allure Report
         if: always()
