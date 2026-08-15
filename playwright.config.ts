@@ -32,7 +32,7 @@ export default defineConfig({
     baseURL: process.env.URL,
 
     // Headed locally, headless on CI
-    headless: !process.env.CI,
+    headless: true,
 
     // Capture trace on retry
     trace: 'on-first-retry',
