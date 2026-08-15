@@ -48,6 +48,9 @@ jobs:
           echo "URL=$URL"
           echo "CI=$CI"
 
+      - name: Clean Allure Results
+        run: rm -rf allure-results allure-report
+
       - name: Run Playwright tests
         run: npx playwright test
 
