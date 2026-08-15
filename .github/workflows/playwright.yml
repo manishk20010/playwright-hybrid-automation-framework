@@ -62,12 +62,12 @@ jobs:
          - name: Inspect Allure Test Results
           if: always()
           run: |
-          echo "===== TEST NAMES / STATUS / HISTORY ====="
+            echo "===== TEST NAMES / STATUS / HISTORY ====="
 
-          for file in allure-results/*-result.json; do
-          echo "----------------------------------------"
-          echo "FILE: $file"
-          jq -r '"name=\(.name) | status=\(.status) | historyId=\(.historyId) | fullName=\(.fullName)"' "$file"
+            for file in allure-results/*-result.json; do
+            echo "----------------------------------------"
+            echo "FILE: $file"
+            jq -r '"name=\(.name) | status=\(.status) | historyId=\(.historyId) | fullName=\(.fullName)"' "$file"
           done
 
 
