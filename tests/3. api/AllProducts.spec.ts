@@ -7,6 +7,7 @@ test('Get All Products', async () => {
     const response = await api.get('https://automationexercise.com/api/productsList')
 
     const body = await response.json()
+    
    
     //console.log(body)
     
